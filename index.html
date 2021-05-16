@@ -15,26 +15,7 @@ body{background-image:linear-gradient(to top, rgba(80,0,48,0.45), rgba(255,0,160
 </style>
 	<div id="app">
 		<div class="page-home">
-		<div class="title" id="title" style="transform: scale(1);">
-    <script>
-        Date.prototype.format = function (fmt) {
-            var o = {
-                "y+": this.getFullYear, //年
-                "M+": this.getMonth() + 1, //月份
-                "d+": this.getDate(), //日
-                "h+": this.getHours(), //小时
-                "m+": this.getMinutes(), //分
-                "s+": this.getSeconds() //秒
-            };
-            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
-            for (var k in o)
-                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
-            return fmt;
-        }
-        setInterval("document.getElementById('titleText').innerHTML = (new Date()).format('hh:mm');", 1000);
-    </script>
-			<h1 id="titleText"></h1>
-		</div>
+		<div class="logo"></div>
 		<div class="content">
 	<div class="content-body">
 		<script src="https://api.btstu.cn/yan/api.php?encode=js"></script>
